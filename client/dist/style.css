@@ -1,0 +1,10 @@
+
+
+.userImage {
+    object-fit: cover;
+    /* border: 1px solid #ddd; Gray border */
+    border-radius: 50%;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    height: 50px;
+    width: 50px; /* Set a small width */
+  }

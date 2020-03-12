@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewList from './ReviewList.jsx'
+import SearchBar from './SearchBar.jsx';
 
 class App extends React.Component {
     constructor (props) {
@@ -26,6 +27,7 @@ class App extends React.Component {
         return(
             <div>
                 <h1>Testing Reviews</h1>
+                <SearchBar reviews={ this.state.reviews }/>
                 <ReviewList reviews={ this.state.reviews }/>
             </div>
         )
