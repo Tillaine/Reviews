@@ -11,14 +11,22 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-    
+        fetch('http://localhost:3000/api/reviews')
+        .then(reviews => reviews.json())
+        .then(reviews => {
+            this.setState({ reviews })
+        })
+        
+        .catch(err => console.log(err))
+
+        
     }
 
     render(){
         return(
             <div>
                 <h1>Testing Reviews</h1>
-                <ReviewList/>
+                <ReviewList reviews={ this.state.reviews }/>
             </div>
         )
     }

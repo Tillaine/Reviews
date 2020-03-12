@@ -5,7 +5,7 @@ const mysql = require('mysql')
 const connection = mysql.createConnection({
     host: 'localhost', 
     user: 'root',
-    database: 'moves_db'
+    database: 'reviews_db'
 });
 
 connection.connect(function (err) {
@@ -18,8 +18,15 @@ connection.connect(function (err) {
     }
 });
 
-getSomeReviews = () => {
-    connection.query()
+getSomeReviews = (amountOfreviews) => {
+    const queryString = `SELECT * FROM reviews WHERE id < ${amountOfreviews + 1}`
+    return new Promise((resolve, reject) => {
+        connection.query(queryString, (err, reviews) => {
+            if (err) { reject(err) }
+            else { resolve(reviews) }
+        })
+
+    })
 }
 
-module.exports = { connection }
+module.exports = { connection, getSomeReviews }

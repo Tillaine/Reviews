@@ -1,8 +1,8 @@
 const express =  require('express');
 const morgan = require('morgan');
-const mysql = require('mysql')
 const Port = 3000;
-const db = require('./database')
+const db = require('./database').connection
+const { getSomeReviews } = require('./database')
 
 // creating server 
 const app = express();
@@ -26,7 +26,10 @@ app.use(express.static('./client/dist'))
 
 // get all moves 
 app.get('/api/reviews', (req, res) => {
-   res.send(200)
+   getSomeReviews(10)
+   .then(reviews => { res.send(reviews) })
+   .catch(err => console.log(err));
+   
 });
 
 
