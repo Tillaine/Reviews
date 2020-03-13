@@ -8,7 +8,22 @@ class App extends React.Component {
         this.state = {
             reviews: []
         }
+        this.handleSearch = this.handleSearch.bind(this);
 
+    }
+
+    handleSearch(searchTerm) {
+        const options = {
+            method: 'GET',
+
+        }
+        console.log('handlesubmit', searchTerm)
+        fetch(`http://localhost:3000/api/search?term=${searchTerm}`)
+        .then(reviews => {
+            console.log(reviews)
+            // reviews.json()
+        })
+        .catch(err => console.log(err))
     }
 
     componentDidMount() {
@@ -20,14 +35,13 @@ class App extends React.Component {
         
         .catch(err => console.log(err))
 
-        
     }
 
     render(){
         return(
             <div>
                 <h1>Testing Reviews</h1>
-                <SearchBar reviews={ this.state.reviews }/>
+                <SearchBar handleSearch={ this.handleSearch } reviews={ this.state.reviews }/>
                 <ReviewList reviews={ this.state.reviews }/>
             </div>
         )

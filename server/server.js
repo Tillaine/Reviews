@@ -32,5 +32,11 @@ app.get('/api/reviews', (req, res) => {
    
 });
 
+app.get('/api/search', (req, res) => {
+   console.log(req.query.term)
+   res.send('this route is coming soon!')
+   
+});
+
 
 app.listen(Port)

@@ -8,6 +8,7 @@ const connection = mysql.createConnection({
     database: 'reviews_db'
 });
 
+// database connection 
 connection.connect(function (err) {
     if(err){
         if(err) {
@@ -18,6 +19,7 @@ connection.connect(function (err) {
     }
 });
 
+//get a given number of reviews 
 getSomeReviews = (amountOfreviews) => {
     const queryString = `SELECT * FROM reviews WHERE id < ${amountOfreviews + 1}`
     return new Promise((resolve, reject) => {
@@ -27,6 +29,12 @@ getSomeReviews = (amountOfreviews) => {
         })
 
     })
+}
+
+//get reviews that include search term 
+
+getRelevantReviews = (searchTerm) => {
+    
 }
 
 module.exports = { connection, getSomeReviews }
