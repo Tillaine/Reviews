@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const Port = 3000;
 const db = require('./database').connection
 const { getSomeReviews } = require('./database')
+const { getRelevantReviews  } = require('./database')
 
 // creating server 
 const app = express();
@@ -33,8 +34,8 @@ app.get('/api/reviews', (req, res) => {
 });
 
 app.get('/api/search', (req, res) => {
-   console.log(req.query.term)
-   res.send('this route is coming soon!')
+   getRelevantReviews(req.query.term)
+   .then(reviews => res.send(reviews))
    
 });
 

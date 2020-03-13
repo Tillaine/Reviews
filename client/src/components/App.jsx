@@ -19,10 +19,9 @@ class App extends React.Component {
         }
         console.log('handlesubmit', searchTerm)
         fetch(`http://localhost:3000/api/search?term=${searchTerm}`)
-        .then(reviews => {
-            console.log(reviews)
-            // reviews.json()
-        })
+        .then(reviews => reviews.json())
+        .then(reviews => this.setState({ reviews }))
+        // .then(reviews => console.log(reviews))
         .catch(err => console.log(err))
     }
 
