@@ -1,4 +1,7 @@
 
+body {
+    font-family: Raleway;
+}
 
 .userImage {
     object-fit: cover;
@@ -8,3 +11,39 @@
     height: 50px;
     width: 50px; /* Set a small width */
   }
+/* *********************************
+search box
+********************************* */
+  .searchBar {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .search_line {
+    flex: 30%;
+    padding: 20px;
+    margin-right:5px;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: Roboto;
+    color:rgb(73, 73, 73)
+    
+  }
+
+  .teal {
+   color: rgb(18, 132, 136)
+    
+  }
+
+  /* .searchInput {
+   
+    
+    
+  } */
+
+  
+
+
+  
+ 
+  

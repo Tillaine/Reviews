@@ -10,9 +10,8 @@ class SearchBar extends React.Component {
 
     render() {
         return (<div className={"searchBar"}>
-            <div>
-                <span className={"star"}>★</span> <span>4.85</span> <span>10 reviews</span><input name="search" type="text"></input>
-            </div>
+                <div className="search_line"> <a className="teal">★ </a>4.85 | 10 reviews</div>
+                <div className="search_line"><input className="searchInput"name="search" type="text"></input></div>
         </div>)
     }
 }
