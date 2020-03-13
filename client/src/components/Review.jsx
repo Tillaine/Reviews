@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Review = (props) => {
-    console.log("image", props.imageId)
     const { user_name, date_created, message} = props.review;
     const formatDate = (date) => {
         return date.slice(0, 7)

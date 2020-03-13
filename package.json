@@ -28,6 +28,7 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.5",
     "express": "^4.15.0",
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
