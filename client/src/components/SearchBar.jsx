@@ -30,7 +30,7 @@ class SearchBar extends React.Component {
     render() {
         return (
         <div className={"searchBar"}>
-                <div className="search_line"> <a className="teal">★ </a>4.85 | 10 reviews</div>
+                <div className="search_line"> <a className="teal">★ </a>4.85 | 10 <a className='thin_review'>reviews</a> </div>
                 <div className="search_line">
                     <form onSubmit={e => { e.preventDefault(); this.handleSubmit(e)}} ><input value={this.state.searchValue} onChange={this.handleChange} className="searchInput"name="search" type="text"></input></form>
                 </div>

@@ -11,7 +11,7 @@ const Review = (props) => {
                 <img className="userImage" src={`https://i.picsum.photos/id/${props.imageId}/200/300.jpg`}/> <h3 className={"userName"}> {user_name} </h3> 
             </div>
             
-            <h5 className={"userName"}> {message} </h5>
+            <h5 className='thin_review'> {message} </h5>
             <h4 className={"userName"}> {formatDate(date_created)} </h4> 
         </li>
     )

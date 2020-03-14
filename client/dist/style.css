@@ -1,6 +1,7 @@
 
 body {
-    font-family: Raleway;
+    font-family: 'Montserrat', sans-serif;
+    color:rgb(73, 73, 73)
 }
 
 .userImage {
@@ -35,11 +36,11 @@ search box
     
   }
 
-  /* .searchInput {
-   
-    
-    
-  } */
+
+  .thin_review {
+    font-weight: 400;
+  }
+
 
   
 

@@ -34,9 +34,7 @@ getSomeReviews = (amountOfreviews) => {
 //get reviews that include search term 
 
 getRelevantReviews = (searchTerm) => {
-    console.log(searchTerm)
     searchTerm = searchTerm.replace(/['"]+/g, '')
-    console.log('term%%%%%%%', searchTerm)
     const queryString = `SELECT * FROM reviews WHERE message LIKE "%${searchTerm}%"` 
     return new Promise((resolve, reject) => {
         connection.query(queryString, (err, reviews) => {
@@ -56,7 +54,7 @@ const messages = ipsum.split('. ')
 updateMessages = () => {
     randomMessage = () => messages[Math.floor(Math.random() * messages.length)]
     for (let id = 0; id < 200; id++) {
-        queryString = `UPDATE reviews SET message = "${randomMessage() + randomMessage()}" WHERE id=${id}`
+        queryString = `UPDATE reviews SET message = "${randomMessage() + ". " + randomMessage()}" WHERE id=${id}`
         connection.query(queryString, (err) => {
             if(err) { console.log(err) }
         })
