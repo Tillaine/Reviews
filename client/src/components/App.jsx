@@ -8,7 +8,8 @@ class App extends React.Component {
         super(props)
         this.state = {
             reviews: [],
-            rating: []
+            ratings: {},
+            AvgRating: 0
         }
         this.handleSearch = this.handleSearch.bind(this);
         this.getRatingData = this.getRatingData.bind(this);
@@ -29,11 +30,19 @@ class App extends React.Component {
                 }
         }
         })
-        Object.keys(ratingSum).forEach(category => {
-            const avg = ratingSum[category].all.reduce((total, num) => total + num)/ratingSum[category].all.length;
-            ratingSum[category].sum = avg.toFixed(1);
+        const rateSumArray = Object.keys(ratingSum).map(category => {
+            const avg = (ratingSum[category].all.reduce((total, num) => 
+            total + num)/ratingSum[category].all.length).toFixed(1);
+            ratingSum[category].sum = avg;
+            return avg
         })
-        console.log(ratingSum)
+        console.log('array reduced', (rateSumArray.reduce((total, rate) => { 
+            return Number(total) + Number(rate)})/rateSumArray.length).toFixed(1))
+        this.setState({
+            AvgRating: (rateSumArray.reduce((total, rate) => { return total + rate})/rateSumArray.length).toFixed(1), 
+            ratings: ratingSum
+        })
+        console.log(this.state)
         //create a rating object 
         //loop through all reviews r
             //for each rating option 
