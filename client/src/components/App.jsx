@@ -9,6 +9,7 @@ class App extends React.Component {
         this.state = {
             reviews: [],
             ratings: {},
+            gotRatings: false,
             AvgRating: 0
         }
         this.handleSearch = this.handleSearch.bind(this);
@@ -36,22 +37,14 @@ class App extends React.Component {
             ratingSum[category].sum = avg;
             return avg
         })
-        console.log('array reduced', (rateSumArray.reduce((total, rate) => { 
-            return Number(total) + Number(rate)})/rateSumArray.length).toFixed(1))
         this.setState({
-            AvgRating: (rateSumArray.reduce((total, rate) => { return total + rate})/rateSumArray.length).toFixed(1), 
-            ratings: ratingSum
+            AvgRating: (rateSumArray.reduce((total, rate) => { 
+                return Number(total) + Number(rate)})/rateSumArray.length).toFixed(1), 
+            ratings: ratingSum,
+            gotRatings: true
+
         })
-        console.log(this.state)
-        //create a rating object 
-        //loop through all reviews r
-            //for each rating option 
-            //if rateObj[rating] is undefined 
-                //rateObj[rating] = [CurrentRating]
-                // else 
-                // rateObj[rating].push(currentRating) 
-        //loop through object push average of all catergory Ratings to end of category array 
-        //setState to update rating summary
+
     }
 
     handleSearch(searchTerm) {
@@ -84,7 +77,7 @@ class App extends React.Component {
             <div>
                 <h1>Testing Reviews</h1>
                 <SearchBar handleSearch={ this.handleSearch } reviews={ this.state.reviews }/>
-                <RatingSummary reviews={this.state.reviews}/>
+                <RatingSummary ratings={ this.state.ratings } avg={ this.state.AvgRating } gotRatings={ this.state.gotRatings }/>
                 <ReviewList reviews={ this.state.reviews }/>
             </div>
         )
