@@ -30,11 +30,13 @@
   "dependencies": {
     "@material-ui/core": "^4.9.5",
     "@material-ui/icons": "^4.9.1",
+    "chart.js": "^2.9.3",
     "express": "^4.15.0",
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
     "nodemon": "^2.0.2",
     "react": "^15.6.2",
+    "react-chartjs-2": "^2.9.0",
     "react-dom": "^15.4.2",
     "sqlite3": "^4.0.6"
   }

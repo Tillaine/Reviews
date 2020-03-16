@@ -4,6 +4,10 @@ body {
     color:rgb(73, 73, 73)
 }
 
+li {
+  list-style: none
+}
+
 .userImage {
     object-fit: cover;
     /* border: 1px solid #ddd; Gray border */
@@ -30,6 +34,7 @@ search box
     color:rgb(73, 73, 73)
     
   }
+
 
   .teal {
    color: rgb(18, 132, 136)
