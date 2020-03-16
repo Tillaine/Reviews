@@ -19,7 +19,9 @@ class RatingSummary extends React.Component {
                         data: [65, 59, 80, 81, 56, 55, 40]
                     }
                 ]
-            }
+            },
+            reviews: this.props.reviews
+
 
         }
     }
