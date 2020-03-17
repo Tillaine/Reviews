@@ -10,7 +10,7 @@ class RatingSummary2 extends React.Component {
         this.state = {
             data : {
     
-                labels: ['Location', 'Checkin', 'Cleanliness', 'Communication', 'Accuracy', 'Value'],
+                labels: ['Communication', 'Accuracy', 'Value'],
                 datasets: [
                     {
                         label: 'My First dataset',
@@ -25,7 +25,7 @@ class RatingSummary2 extends React.Component {
                         },
                         hoverBackgroundColor: 'rgba(18, 132, 136,0.4)',
                         hoverBorderColor: 'rgba(18, 132, 136 ,1)',
-                        data: [this.value, this.Check_in, this.location]
+                        data: [this.value, this.Check_in, this.Check_in]
                     }
                 ]
                
@@ -50,19 +50,19 @@ class RatingSummary2 extends React.Component {
     render() {
 
             return (
-                <div className={'chartConatiner'}>
 
           <div >
             <h2>Bar Example (custom size)</h2>
             <HorizontalBar
               data={this.state.data}
-              width={100}
-              height={50}
+              width={50}
+              height={5}
               line
               options={{
                 maintainAspectRatio: false,
                 scales: {
                     xAxes: [{
+                        display: false,
                         gridLines: {
                             display:false
                         }
@@ -76,7 +76,6 @@ class RatingSummary2 extends React.Component {
               }}
             />
           </div>
-                </div>
         );
     }
 
