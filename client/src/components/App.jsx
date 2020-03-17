@@ -2,6 +2,7 @@ import React from 'react';
 import ReviewList from './ReviewList.jsx'
 import SearchBar from './SearchBar.jsx';
 import RatingSummary from './RatingSummary.jsx';
+import RatingSummary2 from './RatingSummary.jsx';
 
 class App extends React.Component {
     constructor (props) {
@@ -77,6 +78,7 @@ class App extends React.Component {
             <div>
                 <h1>Testing Reviews</h1>
                 <SearchBar handleSearch={ this.handleSearch } reviews={ this.state.reviews }/>
+                <RatingSummary ratings={ this.state.ratings } avg={ this.state.AvgRating } gotRatings={ this.state.gotRatings }/>
                 <RatingSummary ratings={ this.state.ratings } avg={ this.state.AvgRating } gotRatings={ this.state.gotRatings }/>
                 <ReviewList reviews={ this.state.reviews }/>
             </div>
