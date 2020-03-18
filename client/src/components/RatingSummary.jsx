@@ -1,17 +1,17 @@
 import React from 'react';
 import {HorizontalBar} from 'react-chartjs-2';
 
+
+
 class RatingSummary extends React.Component {
     constructor (props) {
         super(props)
-        this.location = 2
-        this.accuracy = 2
-        this.cleanliness = 2
         
         this.state = {
+
             data : {
     
-                labels: ['Location', 'Checkin', 'Cleanliness'],
+                labels: [`Location ${this.props.location}`, `Accuracy ${this.props.accuracy}`, `Cleanliness ${this.props.cleanliness}`],
                 datasets: [
                     {
                         label: 'My First dataset',
@@ -22,7 +22,7 @@ class RatingSummary extends React.Component {
                         maxBarThickness: 8,
                         hoverBackgroundColor: 'rgba(18, 132, 136,0.4)',
                         hoverBorderColor: 'rgba(18, 132, 136 ,1)',
-                        data: [this.accuracy, this.cleanliness, this.communication]
+                        data: [this.props.location, this.props.accuracy, this.props.cleanliness]
                     }
                 ]
                
@@ -34,13 +34,9 @@ class RatingSummary extends React.Component {
     }
 
     componentDidUpdate() {
-    if(this.props.gotRatings) {
+    
 
-        this.location = Number(this.props.ratings.location_rating.sum);
-        this.accuracy = Number(this.props.ratings.accuracy_rating.sum);
-        this.cleanliness = Number(this.props.ratings.cleanliness_rating.sum);
 
-    }
 
     }
     
@@ -50,12 +46,13 @@ class RatingSummary extends React.Component {
                
 
           <div >
-            <h2>Bar Example (custom size)</h2>
+            <h4 className="barHeader">Bar Example (custom size)</h4>
             <HorizontalBar
               data={this.state.data}
-              width={100}
-              height={50}
+              width={5}
+              height={5}
               options={{
+                legend: false,
                 maintainAspectRatio: false,
                 scales: {
                     xAxes: [{
@@ -79,3 +76,5 @@ class RatingSummary extends React.Component {
 }
 
 export default RatingSummary
+
+

@@ -1,4 +1,3 @@
-const {getSomeReviews} = require('./database');
 
 
 
@@ -14,7 +13,8 @@ const getRatingData = (newReviews) => {
                     ratingSum[category].all.push(review[category]) 
                 }
             }
-    }
+            
+        }
     })
     const rateSumArray = Object.keys(ratingSum).map(category => {
         const avg = (ratingSum[category].all.reduce((total, num) => 

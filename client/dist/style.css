@@ -46,8 +46,25 @@ search box
     font-weight: 400;
   }
 
+/* *********************************
+Rating Summary
+********************************* */
 
+  .chartConatiner {
+    display: flex;
+    width:70%
+  }
+
+
+  .chart {
+    flex: 50%
+
+  }
   
+  .barHeader {
+    opacity: 0;
+   
+  }
 
 
   

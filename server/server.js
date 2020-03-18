@@ -46,8 +46,12 @@ const reviewsWithRatings = {}
    .then(reviews => {
       reviewsWithRatings.reviews = reviews;
       reviewsWithRatings.ratings = getRatingData(reviews)
-      res.send(reviewsWithRatings)
+      // console.log(getRatingData(reviews))
+      return reviewsWithRatings
    }) 
+   .then(reviewsWithRatings => {
+      console.log(reviewsWithRatings)
+   })
    .catch(err => console.log(err))
 })
 
