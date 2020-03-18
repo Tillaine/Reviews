@@ -11,7 +11,7 @@ class App extends React.Component {
         this.state = {
             reviews: tempData.reviews,
             ratings: tempData.ratings.ratingSum,
-            AvgRating: tempData.AvgRating
+            AvgRating: tempData.ratings.AvgRating
         }
         this.handleSearch = this.handleSearch.bind(this);
 
@@ -51,7 +51,7 @@ class App extends React.Component {
         return(
             <div>
                 <h1>Testing Reviews</h1>
-                <SearchBar  avg={ this.state.AvgRating } handleSearch={ this.handleSearch } reviews={ this.state.reviews }/>
+                <SearchBar  avg={ this.state.AvgRating } handleSearch={ this.handleSearch }/>
                 <div className='chartConatiner'>
                     <div className="chart">
                         <RatingSummary 

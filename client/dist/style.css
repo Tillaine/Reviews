@@ -4,69 +4,117 @@ body {
     color:rgb(73, 73, 73)
 }
 
-li {
-  list-style: none
-}
 
 .userImage {
-    object-fit: cover;
-    /* border: 1px solid #ddd; Gray border */
-    border-radius: 50%;  /* Rounded border */
-    padding: 5px; /* Some padding */
-    height: 50px;
-    width: 50px; /* Set a small width */
-  }
+  object-fit: cover;
+  /* border: 1px solid #ddd; Gray border */
+  border-radius: 50%;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  height: 50px;
+  width: 50px; /* Set a small width */
+}
 /* *********************************
 search box
 ********************************* */
-  .searchBar {
-    display: flex;
-    flex-direction: row;
-  }
+.searchBar {
+  display: flex;
+  flex-direction: row;
+}
 
-  .search_line {
-    flex: 30%;
-    padding: 20px;
-    margin-right:5px;
-    font-weight: 700;
-    font-size: 18px;
-    font-family: Roboto;
-    color:rgb(73, 73, 73)
-    
-  }
-
-
-  .teal {
-   color: rgb(18, 132, 136)
-    
-  }
+.search_line {
+  flex: 30%;
+  padding: 20px;
+  margin-right:5px;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: Roboto;
+  color:rgb(73, 73, 73)
+  
+}
 
 
-  .thin_review {
-    font-weight: 400;
-  }
+.teal {
+  color: rgb(18, 132, 136)
+  
+}
+
+
 
 /* *********************************
 Rating Summary
 ********************************* */
 
-  .chartConatiner {
-    display: flex;
-    width:70%
-  }
+.chartConatiner {
+  display: flex;
+  width:70%
+}
 
 
-  .chart {
-    flex: 50%
-
-  }
+.chart {
+  flex: 50%
   
-  .barHeader {
-    opacity: 0;
-   
-  }
+}
 
-
+.barHeader {
+  opacity: 0;
   
+}
+
+/* *********************************
+Rating Summary
+********************************* */
+li {
+  list-style: none;
+  border-bottom-width: var(--border-rule-border-width, 1px) ;
+  border-bottom-color: var(--color-divider, #EBEBEB); 
+  border-bottom-style: solid ;
+}
+
+.thin_review {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.375em !important;
+  color: rgb(72, 72, 72) !important;
+  margin: 0px !important;
+  overflow-wrap: break-word !important;
+}
+
+.ReviewContainer {
+  margin-top: 24px;
+  display: flex;
+}
+
+  .reviewInfo {
+    flex: 90%;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+  }
  
+  .reviewImg {
+    flex: 10%;
+    align-self: flex-start;
+    
+  }
   
+.userName {
+  
+  font-weight: 600;
+  font-family: Quicksand;
+}
+
+.date {
+  font-weight: 400;
+  font-family: Quicksand;
+  font-size: 14px;
+}
+
+
+.reviewSpacer {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
