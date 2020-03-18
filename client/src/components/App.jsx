@@ -14,6 +14,8 @@ class App extends React.Component {
             AvgRating: tempData.ratings.AvgRating
         }
         this.handleSearch = this.handleSearch.bind(this);
+        this.getReviews = this.getReviews.bind(this);
+        this.getRelevantReviews = this.getRelevantReviews.bind(this);
 
     }
     // id, user_name, property_id, message, date_created, user_img_url, accuracy_rating, location_rating, cleanliness_rating, value_rating, communication_rating, Check_in_rating
@@ -22,6 +24,10 @@ class App extends React.Component {
    
 
     handleSearch(searchTerm) {
+        this.getRelevantReviews(searchTerm);
+    }
+
+    getRelevantReviews(searchTerm) {
         console.log('handlesubmit', searchTerm)
         fetch(`http://localhost:3000/api/search?term=${searchTerm}`)
         .then(reviews => reviews.json())
@@ -31,9 +37,11 @@ class App extends React.Component {
             })
         // .then(reviews => console.log(reviews))
         .catch(err => console.log(err))
+
     }
 
-    componentDidMount() {
+    getReviews() {
+
         fetch('http://localhost:3000/api/reviews')
         .then(reviews => reviews.json())
         .then(reviews => {
@@ -46,8 +54,11 @@ class App extends React.Component {
 
     }
 
+    componentDidMount() {
+        this.getReviews()
+    }
+
     render(){
-        console.log('state ratings', this.state.ratings)
         return(
             <div>
                 <h1>Testing Reviews</h1>
