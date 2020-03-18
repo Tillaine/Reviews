@@ -28,11 +28,12 @@ class SearchBar extends React.Component {
 
 
     render() {
+        console.log(this.props.avg)
         return (
         <div className={"searchBar"}>
-                <div className="search_line"> <a className="teal">★ </a>4.85 | 10 reviews</div>
+                <div className="search_line"> <a className="teal">★ </a>{ this.props.avg } | 10 <a className='thin_review'>reviews</a> </div>
                 <div className="search_line">
-                    <form onSubmit={e => { e.preventDefault(); this.handleSubmit(e)}} ><input value={this.state.searchValue} onChange={this.handleChange} className="searchInput"name="search" type="text"></input></form>
+                    <form onSubmit={e => { e.preventDefault(); this.handleSubmit(e)}} ><input placeholder="Search Reviews       🔎" value={this.state.searchValue} onChange={this.handleChange} className="searchInput"name="search" type="text"></input></form>
                 </div>
         </div>)
     }

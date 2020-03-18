@@ -9,7 +9,7 @@ CREATE TABLE `reviews` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`user_name` VARCHAR(50) NOT NULL COLLATE 'utf8_unicode_ci',
 	`property_id` INT(11) NOT NULL COLLATE 'utf8_unicode_ci',
-	`message` VARCHAR(300) NOT NULL COLLATE 'utf8_unicode_ci',
+	`message` VARCHAR(500) NOT NULL COLLATE 'utf8_unicode_ci',
 	`date_created` DATE NOT NULL,
     `user_img_url` VARCHAR(300)  NOT NULL,
 	`accuracy_rating` DECIMAL(2, 1) NOT NULL,
