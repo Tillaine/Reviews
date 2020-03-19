@@ -39,13 +39,14 @@ class RatingSummary extends React.Component {
                
 
           <div >
-            <h4 className="barHeader">Bar Example (custom size)</h4>
+            <p className="barHeader">Bar Example (custom size)</p>
             <HorizontalBar
               data={data}
-              width={5}
+              width={2}
               height={5}
               options={{
                 legend: false,
+
                 maintainAspectRatio: false,
                 scales: {
                     xAxes: [{

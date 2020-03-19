@@ -12,7 +12,7 @@ class RatingSummary2 extends React.Component {
 
     
     render() {
-
+        Chart.defaults.global.defaultFontFamily = "Quicksand";
         const data = {
     
             labels: [`Communication ${this.props.communication}`, `Accuracy ${this.props.accuracy}`, `Value ${this.props.Check_in}`],
@@ -40,16 +40,14 @@ class RatingSummary2 extends React.Component {
             return (
 
           <div >
-            <h4 className="barHeader">Bar Example (custom size)</h4>
+            <p className="barHeader">Bar Example (custom size)</p>
             <HorizontalBar
               data={data}
-              width={5}
+              width={2}
               height={5}
               line
               options={{
-                  title: {
-                      display: false
-                  },
+                  
                   legend: false,
                 maintainAspectRatio: false,
                 scales: {
@@ -63,7 +61,7 @@ class RatingSummary2 extends React.Component {
                         gridLines: {
                             display:false
                         }   
-                    }]
+                    }],
                 }
               }}
             />
