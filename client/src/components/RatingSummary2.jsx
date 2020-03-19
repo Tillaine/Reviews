@@ -36,14 +36,6 @@ class RatingSummary2 extends React.Component {
         }
     }
 
-    componentDidUpdate() {
-    
-
-        this.communication = Number(this.props.ratings.communication_rating.sum) 
-        this.accuracy = Number(this.props.ratings.accuracy_rating.sum)
-        this.Check_in = Number(this.props.ratings.Check_in_rating.sum)
-
-    }
     
     render() {
 

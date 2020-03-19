@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -131,23 +131,16 @@
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
 <a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a>
-<a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -173,19 +166,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -220,17 +208,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import {HorizontalBar} from 'react-chartjs-2';
 &nbsp;
+&nbsp;
+&nbsp;
 class RatingSummary extends React.Component {
-<span class="fstat-no" title="function not covered" >    co</span>nstructor (props) {
-<span class="cstat-no" title="statement not covered" >        super(props)</span>
-<span class="cstat-no" title="statement not covered" >        this.location = 2</span>
-<span class="cstat-no" title="statement not covered" >        this.accuracy = 2</span>
-<span class="cstat-no" title="statement not covered" >        this.cleanliness = 2</span>
+    constructor (props) {
+        super(props)
         
-<span class="cstat-no" title="statement not covered" >        this.state = {</span>
+        this.state = {
+&nbsp;
             data : {
     
-                labels: ['Location', 'Checkin', 'Cleanliness'],
+                labels: [`Location ${this.props.location}`, `Accuracy ${this.props.accuracy}`, `Cleanliness ${this.props.cleanliness}`],
                 datasets: [
                     {
                         label: 'My First dataset',
@@ -241,7 +229,7 @@ class RatingSummary extends React.Component {
                         maxBarThickness: 8,
                         hoverBackgroundColor: 'rgba(18, 132, 136,0.4)',
                         hoverBorderColor: 'rgba(18, 132, 136 ,1)',
-                        data: [this.accuracy, this.cleanliness, this.communication]
+                        data: [this.props.location, this.props.accuracy, this.props.cleanliness]
                     }
                 ]
                
@@ -252,29 +240,20 @@ class RatingSummary extends React.Component {
         }
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    co</span>mponentDidUpdate() {
-<span class="cstat-no" title="statement not covered" >    if(this.props.gotRatings) {</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >        this.location = Number(this.props.ratings.location_rating.sum);</span>
-<span class="cstat-no" title="statement not covered" >        this.accuracy = Number(this.props.ratings.accuracy_rating.sum);</span>
-<span class="cstat-no" title="statement not covered" >        this.cleanliness = Number(this.props.ratings.cleanliness_rating.sum);</span>
-&nbsp;
-    }
-&nbsp;
-    }
     
-<span class="fstat-no" title="function not covered" >    re</span>nder() {
+    render() {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return (</span>
+            return (
                
 &nbsp;
           &lt;div &gt;
-            &lt;h2&gt;Bar Example (custom size)&lt;/h2&gt;
+            &lt;h4 className="barHeader"&gt;Bar Example (custom size)&lt;/h4&gt;
             &lt;HorizontalBar
               data={this.state.data}
-              width={100}
-              height={50}
+              width={5}
+              height={5}
               options={{
+                legend: false,
                 maintainAspectRatio: false,
                 scales: {
                     xAxes: [{
@@ -297,14 +276,17 @@ class RatingSummary extends React.Component {
 &nbsp;
 }
 &nbsp;
-export default RatingSummary</pre></td></tr></table></pre>
+export default RatingSummary
+&nbsp;
+&nbsp;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Mar 17 2020 12:26:16 GMT-0600 (Mountain Daylight Time)
+                at Wed Mar 18 2020 18:09:46 GMT-0600 (Mountain Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>

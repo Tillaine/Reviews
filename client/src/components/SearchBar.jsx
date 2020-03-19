@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
     }
 
     handleChange(e) {
-        e.preventDefault();
+        // e.preventDefault();
         this.setState({searchValue: e.target.value})
        
     }

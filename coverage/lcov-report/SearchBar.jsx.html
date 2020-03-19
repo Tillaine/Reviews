@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -97,41 +97,43 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -140,38 +142,39 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
 &nbsp;
 class SearchBar extends React.Component {
-<span class="fstat-no" title="function not covered" >    co</span>nstructor(props) {
-<span class="cstat-no" title="statement not covered" >        super(props)</span>
-<span class="cstat-no" title="statement not covered" >        this.state = {</span>
+    constructor(props) {
+        super(props)
+        this.state = {
             searchValue: ''
         }
-<span class="cstat-no" title="statement not covered" >        this.handleChange = this.handleChange.bind(this);</span>
-<span class="cstat-no" title="statement not covered" >        this.handleSubmit = this.handleSubmit.bind(this);</span>
-<span class="cstat-no" title="statement not covered" >        this.clearForm = this.clearForm.bind(this);</span>
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.clearForm = this.clearForm.bind(this);
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    ha</span>ndleChange(e) {
-<span class="cstat-no" title="statement not covered" >        e.preventDefault();</span>
-<span class="cstat-no" title="statement not covered" >        this.setState({searchValue: e.target.value})</span>
+    handleChange(e) {
+        // e.preventDefault();
+        this.setState({searchValue: e.target.value})
        
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    ha</span>ndleSubmit(e) {
-<span class="cstat-no" title="statement not covered" >        this.props.handleSearch(this.state.searchValue)</span>
-<span class="cstat-no" title="statement not covered" >        this.clearForm()</span>
+    handleSubmit(e) {
+        this.props.handleSearch(this.state.searchValue)
+        this.clearForm()
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    cl</span>earForm() {
-<span class="cstat-no" title="statement not covered" >        this.setState({searchValue: ''})</span>
+    clearForm() {
+        this.setState({searchValue: ''})
     }
 &nbsp;
 &nbsp;
-<span class="fstat-no" title="function not covered" >    re</span>nder() {
-<span class="cstat-no" title="statement not covered" >        return (</span>
+    render() {
+        console.log(this.props.avg)
+        return (
         &lt;div className={"searchBar"}&gt;
-                &lt;div className="search_line"&gt; &lt;a className="teal"&gt;★ &lt;/a&gt;4.85 | 10 &lt;a className='thin_review'&gt;reviews&lt;/a&gt; &lt;/div&gt;
+                &lt;div className="search_line"&gt; &lt;a className="teal"&gt;★ &lt;/a&gt;{ this.props.avg } | 10 &lt;a className='thin_review'&gt;reviews&lt;/a&gt; &lt;/div&gt;
                 &lt;div className="search_line"&gt;
-                    &lt;form onSubmit={<span class="fstat-no" title="function not covered" >e </span>=&gt; { <span class="cstat-no" title="statement not covered" >e.preventDefault(); <span class="cstat-no" title="statement not covered" ></span>this.handleSubmit(e)}</span>} &gt;&lt;input value={this.state.searchValue} onChange={this.handleChange} className="searchInput"name="search" type="text"&gt;&lt;/input&gt;&lt;/form&gt;
+                    &lt;form onSubmit={e =&gt; { e.preventDefault(); this.handleSubmit(e)}} &gt;&lt;input placeholder="Search Reviews       🔎" value={this.state.searchValue} onChange={this.handleChange} className="searchInput"name="search" type="text"&gt;&lt;/input&gt;&lt;/form&gt;
                 &lt;/div&gt;
         &lt;/div&gt;)
     }
@@ -184,7 +187,7 @@ export default SearchBar</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Mar 17 2020 12:26:16 GMT-0600 (Mountain Daylight Time)
+                at Wed Mar 18 2020 18:09:46 GMT-0600 (Mountain Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>

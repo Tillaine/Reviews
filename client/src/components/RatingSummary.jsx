@@ -33,12 +33,6 @@ class RatingSummary extends React.Component {
         }
     }
 
-    componentDidUpdate() {
-    
-
-
-
-    }
     
     render() {
 

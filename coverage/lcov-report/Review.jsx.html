@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -82,14 +82,32 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -109,19 +127,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 &nbsp;
-const Review = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; {
-    const { user_name, date_created, message} = <span class="cstat-no" title="statement not covered" >props.review;</span>
-    const formatDate = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(d</span>ate) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        return date.slice(0, 7)</span>
+const Review = (props) =&gt; {
+    const { user_name, date_created, message} = props.review;
+    const formatDate = (date) =&gt; {
+        return date.slice(0, 7)
     }
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
         &lt;li&gt;
-            &lt;div&gt;
-                &lt;img className="userImage" src={`https://i.picsum.photos/id/${props.imageId}/200/300.jpg`}/&gt; &lt;h3 className={"userName"}&gt; {user_name} &lt;/h3&gt; 
+            &lt;div className='ReviewContainer'&gt;
+&nbsp;
+            &lt;div className='reviewImg'&gt;
+                &lt;img className="userImage" src={`https://i.picsum.photos/id/${props.imageId}/200/300.jpg`}/&gt; 
             &lt;/div&gt;
-            
+            &lt;div className='reviewInfo'&gt;
+            &lt;div className={"userName"}&gt; {user_name} &lt;/div&gt; 
+            &lt;div className={"date"}&gt; {formatDate(date_created)} &lt;/div&gt; 
+&nbsp;
+            &lt;/div&gt;
+&nbsp;
+            &lt;/div&gt;
             &lt;h5 className='thin_review'&gt; {message} &lt;/h5&gt;
-            &lt;h4 className={"userName"}&gt; {formatDate(date_created)} &lt;/h4&gt; 
+            &lt;div className='reviewSpacer'&gt;
+            &lt;/div&gt;
         &lt;/li&gt;
     )
 &nbsp;
@@ -139,7 +166,7 @@ export default Review;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Mar 17 2020 12:26:16 GMT-0600 (Mountain Daylight Time)
+                at Wed Mar 18 2020 18:09:46 GMT-0600 (Mountain Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>
