@@ -3,6 +3,15 @@ import { shallow } from 'enzyme';
 import App from '../client/src/components/App';
 import "isomorphic-fetch";
 
+const mockEventGenerator = (str) => {
+  return {
+    target: {
+      name: 'search',
+      value: str,
+    },
+    preventDefault: () => {},
+  };
+};
 
 
 describe(' Unit Test', () => {
