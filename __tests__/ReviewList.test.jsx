@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ReviewList from '../client/src/components/ReviewList';
 import Review from '../client/src/components/Review';
-import "isomorphic-fetch";
+
 
 const reviews = { reviews:
     [ {

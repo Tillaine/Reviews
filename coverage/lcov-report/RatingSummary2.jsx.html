@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -134,22 +134,14 @@
 <a name='L75'></a><a href='#L75'>75</a>
 <a name='L76'></a><a href='#L76'>76</a>
 <a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a>
-<a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L78'></a><a href='#L78'>78</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -183,15 +175,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -231,10 +215,10 @@
 import {HorizontalBar} from 'react-chartjs-2';
 &nbsp;
 class RatingSummary2 extends React.Component {
-<span class="fstat-no" title="function not covered" >    co</span>nstructor (props) {
-<span class="cstat-no" title="statement not covered" >        super(props)</span>
+    constructor (props) {
+        super(props)
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        this.state = {</span>
+        this.state = {
             data : {
     
                 labels: [`Communication ${this.props.communication}`, `Accuracy ${this.props.accuracy}`, `Value ${this.props.Check_in}`],
@@ -265,18 +249,10 @@ class RatingSummary2 extends React.Component {
         }
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    co</span>mponentDidUpdate() {
     
+    render() {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        this.communication = Number(this.props.ratings.communication_rating.sum) </span>
-<span class="cstat-no" title="statement not covered" >        this.accuracy = Number(this.props.ratings.accuracy_rating.sum)</span>
-<span class="cstat-no" title="statement not covered" >        this.Check_in = Number(this.props.ratings.Check_in_rating.sum)</span>
-&nbsp;
-    }
-    
-<span class="fstat-no" title="function not covered" >    re</span>nder() {
-&nbsp;
-<span class="cstat-no" title="statement not covered" >            return (</span>
+            return (
 &nbsp;
           &lt;div &gt;
             &lt;h4 className="barHeader"&gt;Bar Example (custom size)&lt;/h4&gt;
@@ -319,7 +295,7 @@ export default RatingSummary2</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Mar 18 2020 16:16:33 GMT-0600 (Mountain Daylight Time)
+                at Wed Mar 18 2020 18:09:46 GMT-0600 (Mountain Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>
