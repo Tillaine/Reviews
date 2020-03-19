@@ -186,10 +186,5 @@ const reviews = { reviews:
           wrapper.find('.pageButton').simulate('click');
           expect(mockSearch).toHaveBeenCalled();
         })
-    
-    //     test('it should correctly update the state when a change event is emitted', () => {
-    //         const wrapper = shallow(<SearchBar avg={ avgRating } handleSearch={ ( () => {}) }/>);
-    //         wrapper.find('input').simulate('change', mockEventGenerator('a'));
-    //         expect(wrapper.instance().state.searchValue).toBe('a');
-    //       });
+
     })

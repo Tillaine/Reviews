@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1584656668266" clover="3.2.0">
-  <project timestamp="1584656668266" name="All files">
+<coverage generated="1584657460494" clover="3.2.0">
+  <project timestamp="1584657460494" name="All files">
     <metrics statements="78" coveredstatements="60" conditionals="6" coveredconditionals="0" methods="34" coveredmethods="24" elements="118" coveredelements="84" complexity="0" loc="78" ncloc="78" packages="1" files="9" classes="9"/>
     <file name="App.jsx" path="/Users/brittanybartges/Documents/HReact/FEC/Reviews/client/src/components/App.jsx">
       <metrics statements="19" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="4"/>
