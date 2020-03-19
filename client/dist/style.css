@@ -50,6 +50,8 @@ Rating Summary
 ********************************* */
 
 .chartConatiner {
+  text-align: left;
+  margin: 20px;
   display: flex;
   width:70%;
   flex-wrap: wrap;
