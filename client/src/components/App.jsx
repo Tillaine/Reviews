@@ -18,9 +18,10 @@ class App extends React.Component {
         this.getRelevantReviews = this.getRelevantReviews.bind(this);
 
     }
-    // id, user_name, property_id, message, date_created, user_img_url, accuracy_rating, location_rating, cleanliness_rating, value_rating, communication_rating, Check_in_rating
-    //aggregates rating data to display in ratingSummary chart
     
+    // *****************************
+    // Get Reviews 
+    // *****************************
    
 
     handleSearch(searchTerm) {
@@ -32,7 +33,7 @@ class App extends React.Component {
         fetch(`http://localhost:3000/api/search?term=${searchTerm}`)
         .then(reviews => reviews.json())
         .then(reviews => {
-            this.setState({reviews: reviews.reviews, ratings: reviews.ratings, AvgRating: reviews.ratings.AvgRating})
+            this.setState({reviews: reviews.reviews, ratings: reviews.ratings.ratingSum, AvgRating: reviews.ratings.AvgRating})
             console.log("reviews:", this.state.reviews)   
             })
         // .then(reviews => console.log(reviews))
@@ -53,6 +54,10 @@ class App extends React.Component {
         .catch(err => console.log(err))
 
     }
+
+    // *****************************
+    // life cycle methods
+    // *****************************
 
     componentDidMount() {
         this.getReviews()
