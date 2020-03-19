@@ -19,6 +19,8 @@ search box
 .searchBar {
   display: flex;
   flex-direction: row;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .search_line {
@@ -59,12 +61,12 @@ Rating Summary
 .barHeader {
   opacity: 0;
   padding-top: 0;
-  
+  margin-top: 0;
   
 }
 
 /* *********************************
-Rating Summary
+Review
 ********************************* */
 li {
   list-style: none;
@@ -120,4 +122,24 @@ li {
 .reviewSpacer {
   margin-top: 24px;
   margin-bottom: 24px;
+}
+
+ /* REVIEW NAV BAR */
+
+ .reviewNav {
+  -webkit-box-pack: start !important;
+  -webkit-box-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.pagination {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 }

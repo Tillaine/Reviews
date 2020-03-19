@@ -10,7 +10,12 @@ const ReviewList = (props) => {
         const { id } = review
         return <Review key={id} imageId={randomImage()} review={review}/>
         })}
-</ul>)
+</ul>
+<div className='reviewNav'> 
+        <ul className='pagination'
+
+</div>
+)
 } 
 
 export default ReviewList;
