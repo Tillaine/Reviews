@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ReviewList from '../client/src/components/ReviewList';
 import Review from '../client/src/components/Review';
+import PageButton from '../client/src/components/PageButton';
 
 
 const reviews = { reviews:
@@ -160,5 +161,35 @@ const reviews = { reviews:
           <ReviewList 
           reviews={ reviews.reviews }/>
         );
-        expect(wrapper.find(Review)).toHaveLength(10);
+        expect(wrapper.find(Review)).toHaveLength(5);
       });
+
+      test('should render 2 reviews buttons', () => {
+        const wrapper = shallow(
+          <ReviewList 
+          reviews={ reviews.reviews }/>
+        );
+        expect(wrapper.find(PageButton)).toHaveLength(2);
+      });
+
+      // ************************************
+      describe('handle change', () => {
+        test('should invoke the handleClick method when nav button is clicked ', () => {
+          const mockSearch = jest.fn();
+          const wrapper = shallow( 
+            <PageButton 
+            pageNumber={1}
+            handlePageClick={mockSearch} />
+          ); 
+          wrapper.instance().handlePageClick = mockSearch;
+          wrapper.instance().forceUpdate();
+          wrapper.find('.pageButton').simulate('click');
+          expect(mockSearch).toHaveBeenCalled();
+        })
+    
+    //     test('it should correctly update the state when a change event is emitted', () => {
+    //         const wrapper = shallow(<SearchBar avg={ avgRating } handleSearch={ ( () => {}) }/>);
+    //         wrapper.find('input').simulate('change', mockEventGenerator('a'));
+    //         expect(wrapper.instance().state.searchValue).toBe('a');
+    //       });
+    })

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1584637956265" clover="3.2.0">
-  <project timestamp="1584637956266" name="All files">
-    <metrics statements="54" coveredstatements="43" conditionals="0" coveredconditionals="0" methods="27" coveredmethods="19" elements="81" coveredelements="62" complexity="0" loc="54" ncloc="54" packages="1" files="8" classes="8"/>
+<coverage generated="1584656668266" clover="3.2.0">
+  <project timestamp="1584656668266" name="All files">
+    <metrics statements="78" coveredstatements="60" conditionals="6" coveredconditionals="0" methods="34" coveredmethods="24" elements="118" coveredelements="84" complexity="0" loc="78" ncloc="78" packages="1" files="9" classes="9"/>
     <file name="App.jsx" path="/Users/brittanybartges/Documents/HReact/FEC/Reviews/client/src/components/App.jsx">
       <metrics statements="19" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="4"/>
       <line num="10" count="3" type="stmt"/>
@@ -24,6 +24,12 @@
       <line num="63" count="5" type="stmt"/>
       <line num="67" count="5" type="stmt"/>
     </file>
+    <file name="PageButton.jsx" path="/Users/brittanybartges/Documents/HReact/FEC/Reviews/client/src/components/PageButton.jsx">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="13" count="3" type="stmt"/>
+    </file>
     <file name="RatingSummary.jsx" path="/Users/brittanybartges/Documents/HReact/FEC/Reviews/client/src/components/RatingSummary.jsx">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="8" count="1" type="stmt"/>
@@ -32,9 +38,10 @@
       <line num="38" count="1" type="stmt"/>
     </file>
     <file name="RatingSummary2.jsx" path="/Users/brittanybartges/Documents/HReact/FEC/Reviews/client/src/components/RatingSummary2.jsx">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="6" count="1" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
       <line num="16" count="1" type="stmt"/>
       <line num="40" count="1" type="stmt"/>
     </file>
@@ -47,13 +54,33 @@
       <line num="8" count="1" type="stmt"/>
     </file>
     <file name="ReviewList.jsx" path="/Users/brittanybartges/Documents/HReact/FEC/Reviews/client/src/components/ReviewList.jsx">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <line num="4" count="13" type="stmt"/>
+      <metrics statements="26" coveredstatements="19" conditionals="6" coveredconditionals="0" methods="8" coveredmethods="6"/>
       <line num="5" count="3" type="stmt"/>
-      <line num="6" count="3" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="9" count="10" type="stmt"/>
-      <line num="10" count="10" type="stmt"/>
+      <line num="7" count="10" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="16" count="2" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="42" count="2" type="stmt"/>
+      <line num="44" count="2" type="stmt"/>
+      <line num="49" count="10" type="stmt"/>
+      <line num="50" count="10" type="stmt"/>
+      <line num="61" count="4" type="stmt"/>
+      <line num="81" count="3" type="stmt"/>
+      <line num="82" count="2" type="stmt"/>
+      <line num="83" count="2" type="stmt"/>
+      <line num="85" count="2" type="stmt"/>
+      <line num="86" count="2" type="stmt"/>
+      <line num="88" count="2" type="stmt"/>
+      <line num="89" count="2" type="stmt"/>
+      <line num="90" count="2" type="stmt"/>
     </file>
     <file name="SearchBar.jsx" path="/Users/brittanybartges/Documents/HReact/FEC/Reviews/client/src/components/SearchBar.jsx">
       <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
