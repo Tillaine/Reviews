@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch ",
-    "start": "nodemon server/server.js"
+    "start": "nodemon server/server.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -25,14 +26,26 @@
     "babel-loader": "^6.3.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.23.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-adapter-react-16.3": "^1.7.2",
     "webpack": "^2.2.1"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@material-ui/core": "^4.9.5",
+    "@material-ui/icons": "^4.9.1",
+    "chart.js": "^2.9.3",
     "express": "^4.15.0",
+    "jest": "^25.1.0",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
     "nodemon": "^2.0.2",
-    "react": "^15.4.2",
+    "react": "^15.6.2",
+    "react-chartjs-2": "^2.9.0",
     "react-dom": "^15.4.2",
     "sqlite3": "^4.0.6"
   }
