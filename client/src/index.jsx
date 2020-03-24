@@ -6,7 +6,7 @@ import App from './components/App.jsx'
 
 // import App from './components/App.jsx';
 
-ReactDom.render(<App/>, document.getElementById('app'))
+ReactDom.render(<App/>, document.getElementById('reviews'))
 // 
 
 

@@ -73,3 +73,4 @@ class RatingSummary2 extends React.Component {
 }
 
 export default RatingSummary2
+

@@ -60,6 +60,7 @@ class ReviewList extends React.Component {
                     reviewSets.map((review, i) => {
                         return (
                             <PageButton 
+                            key={i}
                             pageNumber={i +1}
                             handlePageClick={this.handlePageClick}
                             />

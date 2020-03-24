@@ -29,12 +29,10 @@ class App extends React.Component {
     }
 
     getRelevantReviews(searchTerm) {
-        console.log('handlesubmit', searchTerm)
         fetch(`http://localhost:3003/api/search?term=${searchTerm}`)
         .then(reviews => reviews.json())
         .then(reviews => {
             this.setState({reviews: reviews.reviews, ratings: reviews.ratings.ratingSum, AvgRating: reviews.ratings.AvgRating})
-            console.log("reviews:", this.state.reviews)   
             })
         // .then(reviews => console.log(reviews))
         .catch(err => console.log(err))
