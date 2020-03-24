@@ -66,7 +66,7 @@ class App extends React.Component {
         console.log(this.state.ratings)
         return(
             <div>
-                <h1>Testing Reviews</h1>
+                <h2>Reviews</h2>
                 <SearchBar  avg={ this.state.AvgRating } handleSearch={ this.handleSearch }/>
                 <div className='chartConatiner'>
                     <div className="chart">
