@@ -49,6 +49,7 @@ class RatingSummary2 extends React.Component {
               options={{
                   
                   legend: false,
+                  responsive: true,
                 maintainAspectRatio: false,
                 scales: {
                     xAxes: [{

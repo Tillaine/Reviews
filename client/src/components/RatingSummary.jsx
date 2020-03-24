@@ -46,7 +46,7 @@ class RatingSummary extends React.Component {
               height={5}
               options={{
                 legend: false,
-
+                responsive: true,
                 maintainAspectRatio: false,
                 scales: {
                     xAxes: [{

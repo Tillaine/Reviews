@@ -30,7 +30,7 @@ class App extends React.Component {
 
     getRelevantReviews(searchTerm) {
         console.log('handlesubmit', searchTerm)
-        fetch(`http://localhost:3000/api/search?term=${searchTerm}`)
+        fetch(`http://localhost:3003/api/search?term=${searchTerm}`)
         .then(reviews => reviews.json())
         .then(reviews => {
             this.setState({reviews: reviews.reviews, ratings: reviews.ratings.ratingSum, AvgRating: reviews.ratings.AvgRating})
@@ -43,10 +43,11 @@ class App extends React.Component {
 
     getReviews() {
 
-        fetch('http://localhost:3000/api/reviews')
+        fetch('http://localhost:3003/api/reviews')
         .then(reviews => reviews.json())
         .then(reviews => {
-            this.setState({reviews: reviews.reviews, ratings: reviews.ratings, AvgRating: reviews.ratings.AvgRating})
+            console.log(reviews)
+            this.setState({reviews: reviews.reviews, ratings: reviews.ratings.ratingSum, AvgRating: reviews.ratings.AvgRating})
             console.log("reviews:", this.state.reviews)
             
         })
@@ -64,6 +65,7 @@ class App extends React.Component {
     }
 
     render(){
+        console.log(this.state.ratings)
         return(
             <div>
                 <h1>Testing Reviews</h1>
@@ -92,3 +94,4 @@ class App extends React.Component {
 }
 
 export default App;
+

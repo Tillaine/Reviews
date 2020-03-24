@@ -1,11 +1,11 @@
 const express =  require('express');
 const morgan = require('morgan');
-const Port = 3000;
+const Port = 3003;
 const db = require('./database').connection
 const { getSomeReviews } = require('./database')
 const { getRelevantReviews  } = require('./database')
 const {getRatingData} = require('./ratings')
-
+var cors = require('cors');
 // creating server 
 const app = express();
 
@@ -14,6 +14,7 @@ const app = express();
 // ***********************************
 // logging requests 
 app.use(morgan('dev'))
+app.use(cors());
 //turning requests into json
 app.use(express.json());
 //
@@ -32,6 +33,7 @@ app.get('/api/search', (req, res) => {
    const reviewsWithRatings = {}
    getRelevantReviews(req.query.term)
    .then(reviews => {
+     
       reviewsWithRatings.reviews = reviews;
       reviewsWithRatings.ratings = getRatingData(reviews)
       res.send(reviewsWithRatings)
@@ -51,6 +53,7 @@ const reviewsWithRatings = {}
    }) 
    .then(reviewsWithRatings => {
       console.log(reviewsWithRatings)
+      res.send(reviewsWithRatings)
    })
    .catch(err => console.log(err))
 })
