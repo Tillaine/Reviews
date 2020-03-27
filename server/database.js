@@ -1,12 +1,15 @@
 const mysql = require('mysql')
+const { pw } = require('../aws.js')
+console.log('pw$$$$', pw)
 // ***********************************
 // db Connection
 // ***********************************
 const connection = mysql.createConnection({
-    host: 'db', 
-    user: 'root',
-    password: 'SMash%$32',
+    host: 'reviews2.cf8pnf993hhe.us-east-2.rds.amazonaws.com', 
+    user: 'admin',
+    password: pw,
     database: 'reviews_db'
+    //plug aws link into database:
 });
 
 // database connection 
