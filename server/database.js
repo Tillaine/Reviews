@@ -3,8 +3,9 @@ const mysql = require('mysql')
 // db Connection
 // ***********************************
 const connection = mysql.createConnection({
-    host: 'localhost', 
+    host: 'db', 
     user: 'root',
+    password: 'SMash%$32',
     database: 'reviews_db'
 });
 
@@ -14,7 +15,7 @@ connection.connect(function (err) {
         if(err) {
             console.log('database err', err);
         } else {
-            console.log('moves_db connected')
+            console.log('connected')
         }
     }
 });

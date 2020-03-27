@@ -1,7 +1,6 @@
 const express =  require('express');
 const morgan = require('morgan');
 const Port = 3003;
-const db = require('./database').connection
 const { getSomeReviews } = require('./database')
 const { getRelevantReviews  } = require('./database')
 const {getRatingData} = require('./ratings')
