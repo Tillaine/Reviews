@@ -2,7 +2,7 @@
 # There By The Sea: Reviews 
 
 
-![](https://giphy.com/gifs/Y3YvSCe87dOFByjycK)
+![](https://media.giphy.com/media/Y3YvSCe87dOFByjycK/giphy.gif)
 
 
 ### Part of a service oriented architecture. 
