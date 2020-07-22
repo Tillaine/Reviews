@@ -12,7 +12,7 @@ There by the sea is a home rental service that specializes in beach front proper
 ## Built With
 - React - front-end 
 - Node.JS > backend software 
-- express > server mongoDB 
+- express > server 
 -  database mySQL
 - chartJS > data visualization 
 
